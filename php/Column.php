@@ -1,6 +1,6 @@
 <?php
 
-namespace ProtoneMedia\LaravelQueryBuilderInertiaJs;
+namespace InertiaTable;
 
 use Illuminate\Contracts\Support\Arrayable;
 

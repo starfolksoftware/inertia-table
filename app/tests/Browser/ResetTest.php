@@ -61,7 +61,7 @@ class ResetTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             User::first()->forceFill([
-                'name'  => 'Pascal Baljet',
+                'name'  => 'Faruk Nasir',
                 'email' => 'pascal@protone.media',
             ])->save();
 
@@ -75,8 +75,8 @@ class ResetTest extends DuskTestCase
                 // First user
                 ->assertSeeIn('tr:first-child td:nth-child(1)', $users->get(0)->name)
                 ->assertMissing('@reset-table')
-                ->assertDontSee('Pascal Baljet')
-                ->type('global', 'Pascal Baljet')
+                ->assertDontSee('Faruk Nasir')
+                ->type('global', 'Faruk Nasir')
                 ->waitForText('pascal@protone.media')
                 ->press('@reset-table')
                 ->waitUntilMissingText('pascal@protone.media');
@@ -88,7 +88,7 @@ class ResetTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             User::first()->forceFill([
-                'name'  => 'Pascal Baljet',
+                'name'  => 'Faruk Nasir',
                 'email' => 'pascal@protone.media',
             ])->save();
 
@@ -102,10 +102,10 @@ class ResetTest extends DuskTestCase
                 // First user
                 ->assertSeeIn('tr:first-child td:nth-child(1)', $users->get(0)->name)
                 ->assertMissing('@reset-table')
-                ->assertDontSee('Pascal Baljet')
+                ->assertDontSee('Faruk Nasir')
                 ->press('@add-search-row-dropdown')
                 ->press('@add-search-row-name')
-                ->type('name', 'Pascal Baljet')
+                ->type('name', 'Faruk Nasir')
                 ->waitForText('pascal@protone.media')
                 ->press('@reset-table')
                 ->waitUntilMissingText('pascal@protone.media');

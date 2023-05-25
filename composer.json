@@ -1,10 +1,14 @@
 {
-    "name": "protonemedia/inertiajs-tables-laravel-query-builder",
+    "name": "starfolksoftware/inertia-table",
     "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
-    "homepage": "https://github.com/protonemedia/inertiajs-tables-laravel-query-builder",
+    "homepage": "https://github.com/starfolksoftware/inertia-table",
     "type": "library",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Faruk Nasir",
+            "email": "faruk@starfolksoftware.com"
+        },
         {
             "name": "Pascal Baljet",
             "email": "pascal@protone.media"
@@ -22,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\": "php"
+            "InertiaTable\\": "php"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\Tests\\": "tests"
+            "InertiaTable\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +47,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ProtoneMedia\\LaravelQueryBuilderInertiaJs\\InertiaTableServiceProvider"
+                "InertiaTable\\InertiaTableServiceProvider"
             ]
         }
     }

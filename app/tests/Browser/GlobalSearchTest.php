@@ -13,7 +13,7 @@ class GlobalSearchTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             User::first()->forceFill([
-                'name'  => 'Pascal Baljet',
+                'name'  => 'Faruk Nasir',
                 'email' => 'pascal@protone.media',
             ])->save();
 
@@ -26,13 +26,13 @@ class GlobalSearchTest extends DuskTestCase
                 ->waitFor('table')
                 // First user
                 ->assertSeeIn('tr:first-child td:nth-child(1)', $users->get(0)->name)
-                ->assertDontSee('Pascal Baljet')
-                ->type('global', 'Pascal Baljet')
+                ->assertDontSee('Faruk Nasir')
+                ->type('global', 'Faruk Nasir')
                 ->waitForText('pascal@protone.media')
                 ->type('global', ' ')
                 ->waitUntilMissingText('pascal@protone.media')
                 ->type('global', 'pascal@protone.media')
-                ->waitForText('Pascal Baljet');
+                ->waitForText('Faruk Nasir');
         });
     }
 }

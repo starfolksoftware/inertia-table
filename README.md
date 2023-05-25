@@ -1,12 +1,12 @@
 # Inertia.js Tables for Laravel Query Builder
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/@protonemedia/inertiajs-tables-laravel-query-builder.svg?style=flat-square)](https://npmjs.com/package/@protonemedia/inertiajs-tables-laravel-query-builder)
-[![npm](https://img.shields.io/npm/dt/@protonemedia/inertiajs-tables-laravel-query-builder.svg?style=flat-square)](https://www.npmjs.com/package/@protonemedia/inertiajs-tables-laravel-query-builder)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/protonemedia/inertiajs-tables-laravel-query-builder.svg?style=flat-square)](https://packagist.org/packages/protonemedia/inertiajs-tables-laravel-query-builder)
+[![Latest Version on NPM](https://img.shields.io/npm/v/@starfolksoftware/inertia-table.svg?style=flat-square)](https://npmjs.com/package/@starfolksoftware/inertia-table)
+[![npm](https://img.shields.io/npm/dt/@starfolksoftware/inertia-table.svg?style=flat-square)](https://www.npmjs.com/package/@starfolksoftware/inertia-table)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/starfolksoftware/inertia-table.svg?style=flat-square)](https://packagist.org/packages/starfolksoftware/inertia-table)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![run-tests](https://github.com/protonemedia/inertiajs-tables-laravel-query-builder/actions/workflows/php.yml/badge.svg?branch=main)](https://github.com/protonemedia/inertiajs-tables-laravel-query-builder/actions/workflows/php.yml)
+[![run-tests](https://github.com/starfolksoftware/inertia-table/actions/workflows/php.yml/badge.svg?branch=main)](https://github.com/starfolksoftware/inertia-table/actions/workflows/php.yml)
 
-## [⚠️ Don't start using this package for new projects ⚠️](https://github.com/protonemedia/inertiajs-tables-laravel-query-builder/issues/122)
+## [⚠️ Don't start using this package for new projects ⚠️](https://github.com/starfolksoftware/inertia-table/issues/122)
 
 This package provides a *DataTables-like* experience for [Inertia.js](https://inertiajs.com/) with support for searching, filtering, sorting, toggling columns, and pagination. It generates URLs that can be consumed by Spatie's excellent [Laravel Query Builder](https://github.com/spatie/laravel-query-builder) package, with no additional logic needed. The components are styled with [Tailwind CSS 3.0](https://tailwindcss.com/), but it's fully customizable with slots. The data refresh logic is based on Inertia's [Ping CRM demo](https://github.com/inertiajs/pingcrm).
 
@@ -20,7 +20,7 @@ This package provides a *DataTables-like* experience for [Inertia.js](https://in
 
 **Did you hear about Laravel Splade? 🤩**
 
-It's the *magic* of Inertia.js with the *simplicity* of Blade. [Splade](https://github.com/protonemedia/laravel-splade) provides a super easy way to build Single Page Applications using Blade templates. Besides that magic SPA-feeling, it comes with more than ten components to sparkle your app and make it interactive, all without ever leaving Blade.
+It's the *magic* of Inertia.js with the *simplicity* of Blade. [Splade](https://github.com/starfolksoftware/laravel-splade) provides a super easy way to build Single Page Applications using Blade templates. Besides that magic SPA-feeling, it comes with more than ten components to sparkle your app and make it interactive, all without ever leaving Blade.
 
 ## Features
 
@@ -41,7 +41,7 @@ It's the *magic* of Inertia.js with the *simplicity* of Blade. [Splade](https://
 * [Tailwind CSS v3](https://tailwindcss.com/) + [Forms plugin](https://github.com/tailwindlabs/tailwindcss-forms)
 * PHP 8.0+
 
-**Note**: There is currently an [issue](https://github.com/protonemedia/inertiajs-tables-laravel-query-builder/issues/69) with using this package with Vite!
+**Note**: There is currently an [issue](https://github.com/starfolksoftware/inertia-table/issues/69) with using this package with Vite!
 
 ## Installation
 
@@ -52,7 +52,7 @@ You need to install both the server-side package and the client-side package. No
 You can install the package via composer:
 
 ```bash
-composer require protonemedia/inertiajs-tables-laravel-query-builder
+composer require starfolksoftware/inertia-table
 ```
 
 The package will automatically register the Service Provider which provides a `table` method you can use on an Interia Response.
@@ -65,7 +65,7 @@ With the `searchInput` method, you can specify which attributes are searchable. 
 Though it's enough to pass in the column key, you may specify a custom label and default value.
 
 ```php
-use ProtoneMedia\LaravelQueryBuilderInertiaJs\InertiaTable;
+use InertiaTable\InertiaTable;
 
 Inertia::render('Page/Index')->table(function (InertiaTable $table) {
     $table->searchInput('name');
@@ -159,7 +159,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Collection;
 use Inertia\Inertia;
-use ProtoneMedia\LaravelQueryBuilderInertiaJs\InertiaTable;
+use InertiaTable\InertiaTable;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 
@@ -207,9 +207,9 @@ class UserIndexController
 You can install the package via either `npm` or `yarn`:
 
 ```bash
-npm install @protonemedia/inertiajs-tables-laravel-query-builder --save
+npm install @starfolksoftware/inertia-table --save
 
-yarn add @protonemedia/inertiajs-tables-laravel-query-builder
+yarn add @starfolksoftware/inertia-table
 ```
 
 Add the repository path to the `content` array of your [Tailwind configuration file](https://tailwindcss.com/docs/content-configuration). This ensures that the styling also works on production builds.
@@ -217,7 +217,7 @@ Add the repository path to the `content` array of your [Tailwind configuration f
 ```js
 module.exports = {
   content: [
-    './node_modules/@protonemedia/inertiajs-tables-laravel-query-builder/**/*.{js,vue}',
+    './node_modules/@starfolksoftware/inertia-table/**/*.{js,vue}',
   ]
 }
 ```
@@ -228,7 +228,7 @@ To use the `Table` component and all its related features, you must import the `
 
 ```vue
 <script setup>
-import { Table } from "@protonemedia/inertiajs-tables-laravel-query-builder";
+import { Table } from "@starfolksoftware/inertia-table";
 
 defineProps(["users"])
 </script>
@@ -358,7 +358,7 @@ Lastly, pass the correct `name` property to each table in the Vue template. Opti
 
 ```vue
 <script setup>
-import { Table } from "@protonemedia/inertiajs-tables-laravel-query-builder";
+import { Table } from "@starfolksoftware/inertia-table";
 
 defineProps(["companies", "users"])
 </script>
@@ -383,7 +383,7 @@ defineProps(["companies", "users"])
 You can override the default pagination translations with the `setTranslations` method. You can do this in your main JavaScript file:
 
 ```js
-import { setTranslations } from "@protonemedia/inertiajs-tables-laravel-query-builder";
+import { setTranslations } from "@starfolksoftware/inertia-table";
 
 setTranslations({
   next: "Next",
@@ -461,7 +461,7 @@ php artisan dusk
 
 * The `InteractsWithQueryBuilder` mixin has been removed and is no longer needed.
 * The `Table` component no longer needs the `filters`, `search`, `columns`, and `on-update` properties.
-* When using a custom `thead` or `tbody` slot, you need to provide [the styling](https://github.com/protonemedia/inertiajs-tables-laravel-query-builder/blob/c8e21649ad372d309eeb62a8f771aa4c7cd0089e/js/Tailwind2/Table.vue#L1) manually.
+* When using a custom `thead` or `tbody` slot, you need to provide [the styling](https://github.com/starfolksoftware/inertia-table/blob/c8e21649ad372d309eeb62a8f771aa4c7cd0089e/js/Tailwind2/Table.vue#L1) manually.
 * When using a custom `thead`, the `showColumn` method has been renamed to `show`.
 * The `setTranslations` method is no longer part of the `Pagination` component, but should be imported.
 * The templates and logic of the components are not separated anymore. Use slots to inject your own implementations.
@@ -483,17 +483,17 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Other Laravel packages
 
-* [`Laravel Analytics Event Tracking`](https://github.com/protonemedia/laravel-analytics-event-tracking): Laravel package to easily send events to Google Analytics.
-* [`Laravel Blade On Demand`](https://github.com/protonemedia/laravel-blade-on-demand): Laravel package to compile Blade templates in memory.
-* [`Laravel Cross Eloquent Search`](https://github.com/protonemedia/laravel-cross-eloquent-search): Laravel package to search through multiple Eloquent models.
-* [`Laravel Eloquent Scope as Select`](https://github.com/protonemedia/laravel-eloquent-scope-as-select): Stop duplicating your Eloquent query scopes and constraints in PHP. This package lets you re-use your query scopes and constraints by adding them as a subquery.
-* [`Laravel Eloquent Where Not`](https://github.com/protonemedia/laravel-eloquent-where-not): This Laravel package allows you to flip/invert an Eloquent scope, or really any query constraint.
-* [`Laravel FFMpeg`](https://github.com/protonemedia/laravel-ffmpeg): This package provides an integration with FFmpeg for Laravel. The storage of the files is handled by Laravel's Filesystem.
-* [`Laravel Form Components`](https://github.com/protonemedia/laravel-form-components): Blade components to rapidly build forms with Tailwind CSS Custom Forms and Bootstrap 4. Supports validation, model binding, default values, translations, includes default vendor styling and fully customizable!
-* [`Laravel Mixins`](https://github.com/protonemedia/laravel-mixins): A collection of Laravel goodies.
-* [`Laravel Verify New Email`](https://github.com/protonemedia/laravel-verify-new-email): This package adds support for verifying new email addresses: when a user updates its email address, it won't replace the old one until the new one is verified.
-* [`Laravel Paddle`](https://github.com/protonemedia/laravel-paddle): Paddle.com API integration for Laravel with support for webhooks/events.
-* [`Laravel WebDAV`](https://github.com/protonemedia/laravel-webdav): WebDAV driver for Laravel's Filesystem.
+* [`Laravel Analytics Event Tracking`](https://github.com/starfolksoftware/laravel-analytics-event-tracking): Laravel package to easily send events to Google Analytics.
+* [`Laravel Blade On Demand`](https://github.com/starfolksoftware/laravel-blade-on-demand): Laravel package to compile Blade templates in memory.
+* [`Laravel Cross Eloquent Search`](https://github.com/starfolksoftware/laravel-cross-eloquent-search): Laravel package to search through multiple Eloquent models.
+* [`Laravel Eloquent Scope as Select`](https://github.com/starfolksoftware/laravel-eloquent-scope-as-select): Stop duplicating your Eloquent query scopes and constraints in PHP. This package lets you re-use your query scopes and constraints by adding them as a subquery.
+* [`Laravel Eloquent Where Not`](https://github.com/starfolksoftware/laravel-eloquent-where-not): This Laravel package allows you to flip/invert an Eloquent scope, or really any query constraint.
+* [`Laravel FFMpeg`](https://github.com/starfolksoftware/laravel-ffmpeg): This package provides an integration with FFmpeg for Laravel. The storage of the files is handled by Laravel's Filesystem.
+* [`Laravel Form Components`](https://github.com/starfolksoftware/laravel-form-components): Blade components to rapidly build forms with Tailwind CSS Custom Forms and Bootstrap 4. Supports validation, model binding, default values, translations, includes default vendor styling and fully customizable!
+* [`Laravel Mixins`](https://github.com/starfolksoftware/laravel-mixins): A collection of Laravel goodies.
+* [`Laravel Verify New Email`](https://github.com/starfolksoftware/laravel-verify-new-email): This package adds support for verifying new email addresses: when a user updates its email address, it won't replace the old one until the new one is verified.
+* [`Laravel Paddle`](https://github.com/starfolksoftware/laravel-paddle): Paddle.com API integration for Laravel with support for webhooks/events.
+* [`Laravel WebDAV`](https://github.com/starfolksoftware/laravel-webdav): WebDAV driver for Laravel's Filesystem.
 
 ## Security
 
@@ -501,7 +501,7 @@ If you discover any security related issues, please email pascal@protone.media i
 
 ## Credits
 
-- [Pascal Baljet](https://github.com/protonemedia)
+- [Faruk Nasir](https://github.com/starfolksoftware)
 - [All Contributors](../../contributors)
 
 ## License

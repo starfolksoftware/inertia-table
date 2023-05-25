@@ -1,20 +1,20 @@
 {
-  "name": "@protonemedia/inertiajs-tables-laravel-query-builder",
+  "name": "@starfolksoftware/inertia-table",
   "version": "2.2.0",
   "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
   "private": false,
-  "author": "Pascal Baljet <pascal@protone.media>",
+  "author": "Faruk Nasir <faruk@starfolksoftware.com>",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/inertiajs-tables-laravel-query-builder.umd.js",
-  "module": "./dist/inertiajs-tables-laravel-query-builder.es.js",
+  "main": "./dist/inertia-table.umd.js",
+  "module": "./dist/inertia-table.es.js",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/inertiajs-tables-laravel-query-builder.es.js",
-      "require": "./dist/inertiajs-tables-laravel-query-builder.umd.js"
+      "import": "./dist/inertia-table.es.js",
+      "require": "./dist/inertia-table.umd.js"
     }
   },
   "scripts": {
