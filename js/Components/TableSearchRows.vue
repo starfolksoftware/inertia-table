@@ -31,14 +31,14 @@
         :name="searchInput.key"
         :value="searchInput.value"
         type="text"
-        class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-indigo-500 focus:border-indigo-500 text-sm border-gray-300"
+        class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-md focus:ring-primary-500 focus:border-primary-500 text-sm border-gray-300"
         @input="onChange(searchInput.key, $event.target.value)"
       >
       <div
         class="absolute inset-y-0 right-0 pr-3 flex items-center"
       >
         <button
-          class="rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          class="rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
           :dusk="`remove-search-row-${searchInput.key}`"
           @click.prevent="onRemove(searchInput.key)"
         >
