@@ -183,7 +183,7 @@ class TwoTablesTest extends DuskTestCase
 
             $users->last()->update([
                 'name'  => 'Baljet Pascal',
-                'email' => 'pascal@pascal.pascal',
+                'email' => 'pascal@example.pascal',
             ]);
 
             $browser->visit('/two-tables/spatie')
