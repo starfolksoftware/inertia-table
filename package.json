@@ -1,6 +1,6 @@
 {
   "name": "@starfolksoftware/inertia-table",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Inertia.js Front-end Components for Spatie's Laravel Query Builder",
   "private": false,
   "author": "Faruk Nasir <faruk@starfolksoftware.com>",
